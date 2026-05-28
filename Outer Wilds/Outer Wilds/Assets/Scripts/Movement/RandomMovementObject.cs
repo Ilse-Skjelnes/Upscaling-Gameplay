@@ -34,7 +34,7 @@ public class RandomMovementObject : MonoBehaviour
         {
             PickNewDirection();
 
-            newRandomTimer = Random.Range(minSameDirection, changeDirectionTimer);
+            newRandomTimer = Random.Range(minSameDirection, maxSameDirection);
             changeDirectionTimer = newRandomTimer;
         }
     }

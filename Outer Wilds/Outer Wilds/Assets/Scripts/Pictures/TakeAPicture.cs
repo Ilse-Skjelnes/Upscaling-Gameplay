@@ -13,6 +13,8 @@ public class TakeAPicture : MonoBehaviour
         {
             StartCoroutine(TakeScreenshotAndShow());
 
+            RaycastHit hit;
+
         }
     }
 
