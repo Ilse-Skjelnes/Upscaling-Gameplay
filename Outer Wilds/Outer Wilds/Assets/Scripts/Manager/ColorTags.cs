@@ -24,12 +24,11 @@ public class ColorTags : MonoBehaviour
         HEART,
         TRIANGLE,
         HEXAGON,
-        PARALLELOGRAM,
         DIAMOND
     }
 
-    [SerializeField] private Colors COLOR;
-    [SerializeField] private Shapes SHAPE;
+    public Colors COLOR;
+    public Shapes SHAPE;
 
 
 }
