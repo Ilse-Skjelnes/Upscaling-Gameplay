@@ -11,6 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: e664ff205aca0944b982b7394eec5ca4
+  - enabled: 1
+    path: Assets/Scenes/Dark alley.unity
+    guid: 1aceda49717f8164a86d12bd030942e8
+  - enabled: 1
+    path: Assets/Scenes/Groepje jongens.unity
+    guid: 2ba5af89c0064a848bd6cdd7afd18bee
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 87042ab96437574448dbb02f3d8beb3d
+  - enabled: 1
+    path: Assets/Scenes/Dansen.unity
+    guid: c6f2d690b63b2064e9ec2796dad08eb5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
