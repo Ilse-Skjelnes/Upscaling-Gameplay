@@ -27,7 +27,7 @@ public class FadeToBlack : MonoBehaviour
             colorAlpha = 0;
             GameManager.cutsceneIndex = cutscene;
             GameManager.Instance.danceMusic.SetActive(false);
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 

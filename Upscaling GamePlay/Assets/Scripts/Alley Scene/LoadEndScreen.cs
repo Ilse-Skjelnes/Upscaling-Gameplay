@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadEndScreen : MonoBehaviour
 {
+    public int sceneIndex;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,8 +16,8 @@ public class LoadEndScreen : MonoBehaviour
     {
         if (transform.localScale.x == 3)
         {
-            GameManager.cutsceneIndex = 2;
-            SceneManager.LoadScene(1);
+            GameManager.cutsceneIndex = sceneIndex;
+            SceneManager.LoadScene(2);
         }
     }
 }

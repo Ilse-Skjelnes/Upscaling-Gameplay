@@ -10,6 +10,6 @@ public class MainMenuButtons : MonoBehaviour
 
     public void StartLevel()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }

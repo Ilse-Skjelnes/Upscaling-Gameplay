@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Video;
 using System.Collections.Generic;
+using System.Collections;
+using UnityEngine.Events;
 public class PlayCutscene : MonoBehaviour
 {
     [SerializeField] private VideoPlayer cutscenePlayer;
@@ -20,10 +22,12 @@ public class PlayCutscene : MonoBehaviour
     void Start()
     {
 
-        
         clipIndex = GameManager.cutsceneIndex;
         cutscenePlayer.clip = clipList[clipIndex];
-        cutscenePlayer.Play();
+
+        cutscenePlayer.Prepare();
+        StartCoroutine(PlayVideoWhenPrepared());
+
     }
 
     // Update is called once per frame
@@ -38,5 +42,16 @@ public class PlayCutscene : MonoBehaviour
         {
             thePlayer.SetActive(false);
         }
+    }
+
+    private IEnumerator PlayVideoWhenPrepared()
+    {
+        while (!cutscenePlayer.isPrepared)
+        {
+            yield return null;
+        }
+
+
+        cutscenePlayer.Play();
     }
 }

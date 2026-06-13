@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 87042ab96437574448dbb02f3d8beb3d
+  - enabled: 1
     path: Assets/Scenes/TheGame.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
@@ -18,11 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Groepje jongens.unity
     guid: 2ba5af89c0064a848bd6cdd7afd18bee
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 87042ab96437574448dbb02f3d8beb3d
-  - enabled: 1
     path: Assets/Scenes/Dansen.unity
     guid: c6f2d690b63b2064e9ec2796dad08eb5
+  - enabled: 1
+    path: Assets/Scenes/PostCutscene.unity
+    guid: 3447315aeb555ab4ea8fa6d0ec3758ee
+  - enabled: 1
+    path: Assets/Scenes/Boyfriend.unity
+    guid: 8fb40ab0168208342a1e11839076a7e1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
