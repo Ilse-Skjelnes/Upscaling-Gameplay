@@ -26,6 +26,7 @@ public class PictureTarget : MonoBehaviour
     {
         randomIndex = Random.Range(0, tags.Count);
         var target = tags[randomIndex];
+        GameManager.Instance.shapesindex = randomIndex;
 
         Color = target.COLOR;
         string theColor = target.COLOR.ToString();

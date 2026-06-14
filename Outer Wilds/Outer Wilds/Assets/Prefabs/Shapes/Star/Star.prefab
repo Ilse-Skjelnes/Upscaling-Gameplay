@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3331868863546961321}
   - component: {fileID: 2712631704986869979}
   - component: {fileID: 1812315690574143212}
+  - component: {fileID: 2259499352443020885}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -51,7 +52,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -98,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RandomMovementObject
   maxSameDirection: 10
   minSameDirection: 5
-  minDirectionChange: -90
-  maxDirectionChange: 90
+  minDirectionChange: 0
+  maxDirectionChange: 360
   movementSpeed: 2
 --- !u!212 &2712631704986869979
 SpriteRenderer:
@@ -174,3 +175,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IColorTags
   COLOR: 7
   SHAPE: 1
+--- !u!114 &2259499352443020885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955991343929691769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977c69adf4518834cac8b5c809a31f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StayInScreen

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1772888596468927548}
   - component: {fileID: 3087013907334111701}
   - component: {fileID: 5730801587376074382}
+  - component: {fileID: 169321331191175554}
   m_Layer: 0
   m_Name: Diamond
   m_TagString: Untagged
@@ -51,7 +52,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -98,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RandomMovementObject
   maxSameDirection: 10
   minSameDirection: 5
-  minDirectionChange: -90
-  maxDirectionChange: 90
+  minDirectionChange: 0
+  maxDirectionChange: 360
   movementSpeed: 2
 --- !u!212 &3087013907334111701
 SpriteRenderer:
@@ -174,3 +175,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IColorTags
   COLOR: 7
   SHAPE: 7
+--- !u!114 &169321331191175554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5652930031149104870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977c69adf4518834cac8b5c809a31f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StayInScreen

@@ -1,14 +1,23 @@
+
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class ScaleUIWithZoom : MonoBehaviour
 {
 
-    private float zoom;
+    private float zoomX;
     private float zoomMultiplier = 4f;
-    [SerializeField] private float minZoom = 2f;
-    [SerializeField] private float maxZoom = 8f;
+    [SerializeField] private float minZoomX = 2f;
+    [SerializeField] private float maxZoomX = 8f;
+
+    //private float zoomY;
+    //[SerializeField] private float minZoomY = 2f;
+    //[SerializeField] private float maxZoomY = 8f;
+
     [SerializeField] private float velocity = 0f;
     [SerializeField] private float smoothTime = 0.25f;
+
+    public GameObject cameraView;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,11 +30,20 @@ public class ScaleUIWithZoom : MonoBehaviour
     void Update()
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        zoom += scroll * zoomMultiplier;
-        zoom = Mathf.Clamp(zoom, minZoom, maxZoom);
-        zoom = Mathf.SmoothDamp(transform.localScale.x, zoom, ref velocity, smoothTime);
+        zoomX -= scroll * zoomMultiplier;
+        zoomX = Mathf.Clamp(zoomX, minZoomX, maxZoomX);
 
-        transform.localScale = new Vector3(zoom, zoom, 1);
+        zoomX = Mathf.SmoothDamp(transform.localScale.x, zoomX, ref velocity, smoothTime);
+
+        //zoomY += scroll * zoomMultiplier;
+        //zoomY = Mathf.Clamp(zoomY, minZoomY, maxZoomY);
+
+        //zoomY = Mathf.SmoothDamp(transform.localScale.x, zoomY, ref velocity, smoothTime);
+
+        GameManager.Instance.rayCastSize = new Vector3(zoomX, (float)(zoomX * 0.6), 1);
+        cameraView.transform.localScale = new Vector3(zoomX, (float)(zoomX * 0.6), 1);
     }
 }
+
+
 

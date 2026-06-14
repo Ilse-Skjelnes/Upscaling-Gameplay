@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 74152402390046360, guid: f340552017ca2804681f73475e1f82b7, type: 3}
+      propertyPath: maxDirectionChange
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 74152402390046360, guid: f340552017ca2804681f73475e1f82b7, type: 3}
+      propertyPath: minDirectionChange
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 211622884717588986, guid: f340552017ca2804681f73475e1f82b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

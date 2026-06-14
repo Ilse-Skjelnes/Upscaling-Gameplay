@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4baf40a73dfce754fb2d573db245d65f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActivateObjectAfterDelay
-  delayTime: 3
+  delayTime: 2
   time: 0
   text: {fileID: 671709628}
 --- !u!1 &620808389
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4baf40a73dfce754fb2d573db245d65f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActivateObjectAfterDelay
-  delayTime: 6
+  delayTime: 4
   time: 0
   text: {fileID: 1789671985}
 --- !u!1 &671709628
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4baf40a73dfce754fb2d573db245d65f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActivateObjectAfterDelay
-  delayTime: 10
+  delayTime: 6
   time: 0
   text: {fileID: 1362387459}
 --- !u!114 &1686504573

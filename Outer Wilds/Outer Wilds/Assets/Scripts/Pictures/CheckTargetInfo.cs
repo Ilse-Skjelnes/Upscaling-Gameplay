@@ -26,6 +26,8 @@ public class CheckTargetInfo : MonoBehaviour
             var script = hit.GetComponent<ColorTags>();
             ColorTags.Colors hitColor = script.COLOR;
             ColorTags.Shapes hitShape = script.SHAPE;
+            //Collider col = hit.GetComponent<Collider>();
+            //col.enabled = true;
 
             if (GameManager.Instance.targetColor == hitColor && GameManager.Instance.targetShape == hitShape)
             {

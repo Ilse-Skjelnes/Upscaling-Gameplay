@@ -30,20 +30,20 @@ public class CameraMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            position += new Vector3(0, movementSpeed);
+            position += new Vector3(0, movementSpeed * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.S)) 
         {
-            position += new Vector3(0, -movementSpeed);
+            position += new Vector3(0, -movementSpeed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            position += new Vector3(-movementSpeed, 0);
+            position += new Vector3(-movementSpeed * Time.deltaTime, 0);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            position += new Vector3(movementSpeed, 0);
+            position += new Vector3(movementSpeed * Time.deltaTime, 0);
         }
     }
 }

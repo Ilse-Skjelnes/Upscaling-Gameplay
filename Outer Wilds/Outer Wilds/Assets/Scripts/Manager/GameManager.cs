@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine.Rendering.UnifiedRayTracing;
 using UnityEngine.Rendering.Universal;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +9,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return instance; } }
 
     public List<GameObject> shapesNColors = new List<GameObject>();
+    public List<Collider> shapesColliders = new List<Collider>();
+    public int shapesindex;
+    public GameObject currentShape;
     
     public List<GameObject> screenShotHits = new List<GameObject>();
     public bool isTarget;
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
     public List<Sprite> screenShots = new List<Sprite>();
     public static List<Sprite> ssSprites = new List<Sprite>();
 
+    public Vector3 rayCastSize;
 
     [SerializeField] private TextMeshProUGUI targetShapeText;
     [SerializeField] private TextMeshProUGUI targetColorText;
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        TargetPicked();
         finalScore = 0;
         screenShotHits.Clear();
         screenShots.Clear();
@@ -56,11 +60,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        TargetPicked();
         targetColorText.text = targetColor.ToString();
         targetShapeText.text = targetShape.ToString() ;
         scoreText.text = score.ToString();
         ssSprites = screenShots;
         finalScore = score;
+
+        
     }
 
     private void SpawnShapesIn()
@@ -74,7 +81,15 @@ public class GameManager : MonoBehaviour
 
             float randomRotation = Random.Range(0, 360);
 
-            GameObject.Instantiate(shapesNColors[i], spawnPoint, Quaternion.Euler(randomRotation,0f, 0f));
+            GameObject spawned = GameObject.Instantiate(shapesNColors[i], spawnPoint, Quaternion.Euler(0f,0f, randomRotation));
+            shapesColliders.Add(spawned.GetComponent<Collider>());
         }
     }
+
+    public void TargetPicked()
+    {
+        currentShape = shapesNColors[shapesindex];
+    }
+
+
 }

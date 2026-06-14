@@ -12,23 +12,13 @@ public class TakeAPicture : MonoBehaviour
     Ray ray;
     public Vector3 boxSize;
 
-    public float raycastTimer = 1;
+    public float raycastTimer = 0.5f;
     public float timer = -1;
 
     private void Update()
     {
         timer -= Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            GameManager.Instance.screenShotHits.Clear();
-            timer = raycastTimer;
-            ray = new Ray(transform.position, transform.forward);
-            
-            StartCoroutine(TakeScreenshotAndShow());
 
-            
-
-        }
         CheckForColliders();
     }
 
@@ -68,6 +58,11 @@ public class TakeAPicture : MonoBehaviour
 
 
             }
+            else
+                for (int i = GameManager.Instance.shapesColliders.Count - 1; i >= 0; i--)
+                {
+                    GameManager.Instance.shapesColliders[i].enabled = true;
+                }
         }
         
         //if (hits.Count > 0)
@@ -83,5 +78,13 @@ public class TakeAPicture : MonoBehaviour
         //}
     }
             
-    
+    public void TakeThePicture()
+    {
+        GameManager.Instance.screenShotHits.Clear();
+        timer = raycastTimer;
+        ray = new Ray(transform.position, transform.forward);
+
+        StartCoroutine(TakeScreenshotAndShow());
+
+    }
 }

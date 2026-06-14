@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2490945997856233216}
   - component: {fileID: 1991838212741320869}
   - component: {fileID: 7573378111581828218}
+  - component: {fileID: 1020175844673446817}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -77,8 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RandomMovementObject
   maxSameDirection: 10
   minSameDirection: 5
-  minDirectionChange: -90
-  maxDirectionChange: 90
+  minDirectionChange: 0
+  maxDirectionChange: 360
   movementSpeed: 2
 --- !u!212 &2490945997856233216
 SpriteRenderer:
@@ -168,9 +169,21 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 9.703104
   m_Center: {x: 0, y: -0.5368972, z: 0}
+--- !u!114 &1020175844673446817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6205959899576055388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977c69adf4518834cac8b5c809a31f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StayInScreen
