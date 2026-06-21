@@ -6,7 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Start Menu.unity
+    guid: e21c779a0077fc14fafd561e2499becf
+  - enabled: 1
+    path: Assets/Scenes/Bookshelf.unity
+    guid: f8d558b4526723a4a81d5eb8b6b72b89
+  - enabled: 1
+    path: Assets/Scenes/SixCrimsonCranes.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
