@@ -109,7 +109,7 @@ public class DrawingManager : MonoBehaviour
         generatedTexture.Apply();
     }
 
-    void ResetColor()
+    public void ResetColor()
     {
         for (int i = 0; i < colorMap.Length; i++)
             colorMap[i] = Color.white;
